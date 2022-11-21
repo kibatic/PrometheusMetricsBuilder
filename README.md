@@ -18,6 +18,14 @@ composer require kibatic/prometheus-metrics-builder
 $metricList = new MetricList();
 $metricList->addMetric(new Metric('foo', 1));
 $metricList->addMetric(new Metric('bar', "NaN"));
+$metricList->addMetric(new Metric(
+    'bar',
+    "NaN",
+    [
+        'label1' => 'value1',
+        'label2' => 'value2',
+    ]
+));
 $response = $metricList->getResponseContent();
 $metricList->clearMetrics();
 ```

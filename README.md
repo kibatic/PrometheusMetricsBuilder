@@ -75,10 +75,14 @@ make test
 Roadmap
 -------
 
-Add CI with travis-ci
+- no plan for the moment
 
 Versions
 --------
+
+2022-11-21 : v1.0.1
+
+* add CI with github actions
 
 2022-11-21 : v1.0.0
 

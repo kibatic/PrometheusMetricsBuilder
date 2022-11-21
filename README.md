@@ -63,7 +63,13 @@ make composer
 # run unit tests
 make test
 ```
-VERSIONS
+
+Roadmap
+-------
+
+Add CI with travis-ci
+
+Versions
 --------
 
 2022-11-21 : v1.0.0

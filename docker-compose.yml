@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+    php:
+        image: php:7.4-cli-alpine
+        volumes:
+            - .:/app
+        working_dir: /app
+
+    composer:
+        image: composer:2.0.8
+        volumes:
+            - .:/app
+            - ${COMPOSER_HOME:-$HOME/.composer}:/tmp
+        working_dir: /app

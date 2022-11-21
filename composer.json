@@ -1,0 +1,32 @@
+{
+  "name": "kibatic/prometheus-metrics-builder",
+  "description": "Library that helps to build prometheus metrics",
+  "keywords": [
+    "prometheus", "metrics", "php", "exporter"
+  ],
+  "scripts": {
+    "phpstan": "vendor/bin/phpstan analyse -l 6 src"
+  },
+  "type": "library",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Kibatic\\PrometheusMetricsBuilder\\": "src"
+    }
+  },
+  "require": {
+    "php": "^8.0.2 || ^7.4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5.11",
+    "phpstan/phpstan": "^0.12.26"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Philippe Le Van",
+      "email": "philippe.levan@kibatic.com"
+    }
+  ]
+}

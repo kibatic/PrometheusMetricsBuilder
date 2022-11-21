@@ -22,7 +22,7 @@ $metricList->addMetric(new Metric('foo', 1));
 $metricList->addMetric(new Metric('bar', "NaN"));
 $metricList->addMetric(new Metric(
     'bar',
-    "NaN",
+    1.35,
     [
         'label1' => 'value1',
         'label2' => 'value2',
@@ -30,6 +30,14 @@ $metricList->addMetric(new Metric(
 ));
 $response = $metricList->getResponseContent();
 $metricList->clearMetrics();
+```
+
+The content of the response will be:
+
+```
+foo 1
+bar NaN
+bar{label1="value1",label2="value2"} 1.35
 ```
 
 

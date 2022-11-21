@@ -1,6 +1,8 @@
 Prometheus Metrics Builder
 ==========================
 
+![example workflow](https://github.com/kibatic/PrometheusMetricsBuilder/actions/workflows/php.yml/badge.svg)
+
 This library helps you to build a Prometheus metrics endpoint for your PHP application.
 
 Quick start

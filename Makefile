@@ -12,6 +12,12 @@ test: ## [host] Lance les tests
 	docker compose run php vendor/bin/phpstan
 	docker compose run php vendor/bin/phpunit
 
+.PHONY: _test
+_test: ## [container] Lance les tests
+	vendor/bin/phpcs
+	vendor/bin/phpstan
+	vendor/bin/phpunit
+
 permissions-dev: ## [host] Configure les permissions de dev
 	sudo setfacl -R  -m u:$(USER):rwX ./
 	sudo setfacl -dR -m u:$(USER):rwX ./

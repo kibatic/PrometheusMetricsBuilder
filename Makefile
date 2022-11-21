@@ -8,6 +8,8 @@ composer: ## [host] Installe les dépendances composer
 
 .PHONY: test
 test: ## [host] Lance les tests
+	docker compose run php vendor/bin/phpcs
+	docker compose run php vendor/bin/phpstan
 	docker compose run php vendor/bin/phpunit
 
 permissions-dev: ## [host] Configure les permissions de dev

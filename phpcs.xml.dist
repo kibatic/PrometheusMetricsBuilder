@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd">
+
+    <arg name="basepath" value="."/>
+    <arg name="cache" value=".phpcs-cache"/>
+    <arg name="colors"/>
+    <arg name="extensions" value="php"/>
+
+	<rule ref="PSR1"/>
+    <rule ref="PSR12">
+    	<!--
+    		removed rules incompatibles with php-cs-fixer and phpcbf (php code beautifuler)
+    	-->
+        <exclude name="PSR12.Operators.OperatorSpacing.NoSpaceBefore"/>
+        <exclude name="PSR12.Operators.OperatorSpacing.NoSpaceAfter"/>
+        <exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact"/>
+        <exclude name="PSR12.Files.FileHeader.SpacingAfterBlock"/>
+        <exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect"/>
+
+        <!-- removed because ugly... -->
+        <exclude name="PSR12.ControlStructures.ControlStructureSpacing"/>
+    </rule>
+
+    <rule ref="Generic.Files.LineLength">
+     <properties>
+      <property name="lineLimit" value="140"/>
+      <property name="absoluteLineLimit" value="140"/>
+     </properties>
+    </rule>
+    <file>src/</file>
+    <file>tests/</file>
+
+</ruleset>

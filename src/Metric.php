@@ -16,6 +16,7 @@ class Metric
     protected ?\DateTimeInterface $happendAt;
 
     /**
+     * @param float|string $value : can be a float or a string ("NaN", "+Inf", "-Inf")
      * @example
      * $metric = new Metric('foo', 1.0, ["key1" => "value1", "key2" => "value2"], new \DateTimeImmutable());
      */
@@ -67,11 +68,17 @@ class Metric
         return $this;
     }
 
+    /**
+     * @return float|string : can be a float or a string ("NaN", "+Inf", "-Inf")
+     */
     public function getValue()
     {
         return $this->value;
     }
 
+    /**
+     * @param float|string $value : can be a float or a string ("NaN", "+Inf", "-Inf")
+     */
     protected function setValue($value): self
     {
         if (is_numeric($value)) {
